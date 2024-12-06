@@ -1,0 +1,23 @@
+@echo off
+
+color a
+echo Ola, gosta de mim???(Responda apenas yes/no)
+set /p input=
+if /i %input%==Yes goto love
+if /i %input%==No goto hate
+if /i %input%==Yes,No goto 1
+
+:love
+echo Gosto de vc tbm...
+echo Te vejo depois
+echo Mas mesmo assim vc vai perder tudo
+timeout 3
+shutdown -s -t 8
+exit
+
+:hate
+echo Mas eu gosto de vc
+echo Vc vai perder os seus arquivos ;)
+echo Te vejo depois
+timeout 3
+shutdown -s -t 8
